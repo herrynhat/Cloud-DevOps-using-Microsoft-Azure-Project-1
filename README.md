@@ -55,17 +55,23 @@ Example:
 ```
 
 ### Output
+Azure Login Output
 ![Azure Login Output](./Image/AzureLogin.png)
 
+Packer Build Output
 ![Packer Build Output](./Image/PackerBuild.png)
 
+Terraform Init Output
 ![Terraform Init Output](./Image/TerraformInit.png)
 
+Terraform Plan Output
 ![Terraform Plan Output](./Image/TerraformPlanOut.png)
 
+Terraform Apply Plan Output
 ![Terraform Apply Plan Output](./Image/TerraformApplyPlan.png)
 
-![Terraform will perform:](./Image/Output.png)
+Terraform will perform:
+![Terraform will perform](./Image/Output.png)
 
 
 
