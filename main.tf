@@ -2,6 +2,12 @@ provider "azurerm" {
   features {}
 }
 
+data "azurerm_shared_image" "main" {
+  name                = "${var.prefix}-image"
+  gallery_name        = "${var.prefix}-image-gallery"
+  resource_group_name = var.resourceGroup
+}
+
 # Create virtual network and subnet on that virtual network
 resource "azurerm_virtual_network" "main" {
   name                = "${var.prefix}-network"
@@ -197,4 +203,6 @@ resource "azurerm_linux_virtual_machine" "main" {
     project = "azure-devops1"
     environment = "development"
   }
+
+  source_image_id = data.azurerm_shared_image.main.id
 }
